@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog List{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+    <div class="blog-list-container">
+        {% for blog in blogs %}
+            <div class="blog-summary">
+                <div class="blog-thumbnail">
+                    <!-- Assuming blog.image_url is the URL to the blog image -->
+                    <img src="/static/images/image (13).png" alt="{{ blog.title }}" class="thumbnail-image">
+
+                </div>
+                <div class="blog-details">
+                    <h3>{{ blog.title }}</h3>
+                    <p class="blog-category">{{ blog.category }}</p>
+                    <p class="blog-date">Posted on: {{ blog.date_posted }}</p>
+                    <a href="{% url 'blog:blog_detail' pk=blog.pk %}" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        {% endfor %}
+      </div>  
+        <!-- Right Side: Most Popular Blogs Card -->
+    <div class="popular-blogs-card">
+      <h2 class="headline headline-2 card-title">
+          <span class="span">Most Popular Blogs</span>
+      </h2>
+      <ul class="popular-list">
+          <!-- Sample popular blog list, replace with actual data -->
+          <li>
+              <div class="popular-card">
+                  <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="/static/images/image (13).png" width="64" height="64" loading="lazy"
+                          alt="Creating is a privilege but it’s also a gift" class="img-cover">
+                  </figure>
+                  <div class="card-content">
+                      <h4 class="headline headline-4 card-title">
+                          <a href="#" class="hover-2" >Creating is a privilege but it’s also a gift</a>
+                      </h4>
+                      <div class="warpper">
+                          <p class="card-subtitle">15 mins read</p>
+                          <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </div>
+
+</div>
+
+
+   
+{% endblock %}

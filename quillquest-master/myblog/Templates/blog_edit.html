@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if edit_mode %}
+        Edit Blog
+    {% else %}
+        New Blog
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="blog-edit-container">
+
+        {% if edit_mode %}
+            <h2>Edit Blog</h2>
+        {% else %}
+            <h2>New Blog</h2>
+        {% endif %}
+
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            <label for="title">Title:</label>
+            <input type="text" name="title" value="{% if edit_mode %}{{ blog.title }}{% endif %}" required>
+
+            <label for="content">Content:</label>
+            <textarea name="content" required>{% if edit_mode %}{{ blog.content }}{% endif %}</textarea>
+
+            <!-- Styled category selection -->
+            <label for="category">Category:</label>
+            <div class="styled-select">
+                <select name="category" required>
+                    {% for choice in categories %}
+                        <option value="{{ choice.0 }}" {% if edit_mode and selected_category == choice.0 %}selected{% endif %}>{{ choice.1 }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">{% if edit_mode %}Update{% else %}Save{% endif %}</button>
+        </form>
+    </div>
+{% endblock %}
