@@ -146,19 +146,21 @@ width: 100%;
 /* Add these styles to your existing styles or create a new style tag */
 
 .popular-blogs-card {
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  width:30%;
-  margin-left: 100px;
+  width: 80%; /* Adjust the width to your preference */
+  max-width: 400px; /* Set a max-width if needed */
+  margin-left: auto;
+  margin-right: auto;
   height:100%;
 }
 
 .popular-blogs-card .card-title {
   font-size: 1.5rem;
-  color:black;
+  color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
 }
@@ -171,7 +173,9 @@ width: 100%;
 
 .popular-card {
   display: flex;
+  flex-direction: column; /* Display content in a column for smaller screens */
   align-items: center;
+  text-align: center; /* Center text */
   margin-bottom: 20px;
 }
 
@@ -180,11 +184,11 @@ width: 100%;
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .popular-card .card-content {
-  flex: 1;
+  width: 100%; /* Occupy full width */
 }
 
 .popular-card .card-title {
@@ -194,35 +198,38 @@ width: 100%;
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.hover-2{
-  color:black;
-  font-size:1.2rem;
+
+.hover-2 {
+  color: black;
+  font-size: 1.2rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .popular-card .warpper {
   display: flex;
+  flex-direction: column; /* Display content in a column for smaller screens */
   align-items: center;
   font-size: 0.9rem;
-  color:black;
+  color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .popular-card .card-subtitle {
-  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .popular-card .publish-date {
   font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .popular-blogs-card {
-    width: 100%;
+    width: 30%; /* Adjust the width for larger screens */
   }
 }
+
 
 
 
