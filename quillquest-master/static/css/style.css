@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-  background-color: #808080; /* Grey background color */
+  background-color:white; /* Grey background color */
   overflow: hidden;
   padding: 24px; /* Increase the padding for a longer navbar */
   display: flex;
@@ -21,8 +21,8 @@ body {
 }
 
 .navbar a:hover {
-  background-color: yellow; /* Yellow background on hover */
-  color: #000; /* Black text color on hover */
+  background-color: lightblue; /* Yellow background on hover */
+  
 }
 
 .navbar a:first-child {
@@ -64,6 +64,7 @@ body {
 .blog-container {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  background-color: white;
 }
 
 
@@ -72,13 +73,14 @@ width: 40%; /* Adjust the width as needed */
 margin: 20px;
 display:block;
 margin-right:20px;
+background-color: whitesmoke;
 }
 
 .blog-summary {
 width: 80%;
 margin-bottom: 20px;
 overflow: hidden;
-border: 1px solid #ddd;
+border: 1px solid black;
 border-radius: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
 transition: transform 0.3s; /* Add transition for hover effect */
@@ -129,8 +131,8 @@ transition: background-color 0.3s, color 0.3s;
 }
 
 .read-more-btn:hover {
-background-color: yellow;
-color: #000;
+background-color: lightblue;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -144,7 +146,7 @@ width: 100%;
 /* Add these styles to your existing styles or create a new style tag */
 
 .popular-blogs-card {
-  background-color: #f8f8f8;
+  background-color:whitesmoke;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -156,7 +158,7 @@ width: 100%;
 
 .popular-blogs-card .card-title {
   font-size: 1.5rem;
-  color: black;
+  color:black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
 }
@@ -229,8 +231,8 @@ width: 100%;
 
 /* Responsive Footer Styles */
 .footer {
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 20px;
   text-align: center;
 }
@@ -244,15 +246,15 @@ width: 100%;
 }
 
 .footer input {
-  border: 1px solid #555;
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: #444;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
   padding: 10px;
 }
 
 .footer button {
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 5px;
@@ -281,14 +283,16 @@ width: 100%;
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
 }
 
 a {
@@ -313,14 +317,14 @@ input {
   padding: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 5px;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 5px;
@@ -359,7 +363,7 @@ button {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -368,28 +372,31 @@ button {
   display: inline-block;
   margin-bottom: 20px;
   text-decoration: none;
-  color: #4CAF50;
+  color: black;
   padding: 10px 15px;
   background-color: #fff;
-  border: 1px solid #4CAF50;
+  border: 1px solid blue;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .dashboard-link:hover, .back-button:hover {
-  background-color: #4CAF50;
+  background-color: blue;
   color: #fff;
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .date-posted {
   text-align: center;
-  color: #666;
+  color: black;
   margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
 }
 
 #blog-content {
@@ -421,27 +428,12 @@ h1 {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.dashboard-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #4CAF50;
-  padding: 10px 15px;
-  background-color: #fff;
-  border: 1px solid #4CAF50;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
 
-.dashboard-link:hover {
-  background-color: #4CAF50;
-  color: #fff;
-}
 
 h2 {
   text-align: center;
@@ -613,4 +605,10 @@ p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
     color:red;
+}
+
+#blog-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

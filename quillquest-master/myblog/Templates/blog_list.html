@@ -16,6 +16,8 @@
                     <h3>{{ blog.title }}</h3>
                     <p class="blog-category">{{ blog.category }}</p>
                     <p class="blog-date">Posted on: {{ blog.date_posted }}</p>
+                    <p id="blog-content">{{ blog.content|slice:":50" }}</p>
+
                     <a href="{% url 'blog:blog_detail' pk=blog.pk %}" class="read-more-btn">Read More</a>
                 </div>
             </div>
@@ -49,7 +51,9 @@
   </div>
 
 </div>
-
-
-   
+ 
 {% endblock %}
+
+
+
+  
