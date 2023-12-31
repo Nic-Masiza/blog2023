@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-  background-color:white; /* Grey background color */
+  background-color:whitesmoke; /* Grey background color */
   overflow: hidden;
   padding: 24px; /* Increase the padding for a longer navbar */
   display: flex;
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar a:hover {
-  background-color: lightblue; /* Yellow background on hover */
+  background-color: navy; /* Yellow background on hover */
   
 }
 
@@ -73,7 +73,6 @@ width: 40%; /* Adjust the width as needed */
 margin: 20px;
 display:block;
 margin-right:20px;
-background-color: whitesmoke;
 }
 
 .blog-summary {
@@ -84,6 +83,7 @@ border: 1px solid black;
 border-radius: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
 transition: transform 0.3s; /* Add transition for hover effect */
+background-color:whitesmoke;
 }
 
 .blog-summary:hover {
@@ -228,50 +228,55 @@ width: 100%;
 
 
 /* Add these styles to your existing styles or create a new style tag */
-
-/* Responsive Footer Styles */
 .footer {
   background-color: white;
   color: black;
   padding: 20px;
   text-align: center;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer input,
 .footer button {
   padding: 10px;
   margin: 5px;
-  width: calc(60% - 30px); /* Adjust the width to your preference */
+  width: calc(40% - 20px); /* Adjust the width to your preference */
   box-sizing: border-box;
 }
 
 .footer input {
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 5px;
   background-color: whitesmoke;
-  color: black;
+  color: #333;
   padding: 10px;
 }
 
 .footer button {
-  background-color: blue;
-  color: white;
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: calc(20% - 20px); /* Adjust the width to your preference */
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
-  .navbar a {
-      display: block;
-      margin: 10px 0;
-  }
-
   .footer input,
   .footer button {
-      width: 100%;
+    width: 100%;
   }
+}
+
+/* Text for Subscription */
+.subscription-text {
+  font-size: 14px;
+  margin-top: 10px;
+  color: black;
 }
 
 

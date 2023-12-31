@@ -10,7 +10,7 @@
 <body>
 
 <div class="navbar">
-    <a href="{% url 'blog:blog_dashboard' %}" class="btn btn-primary login-btn">Dashboard</a>
+        <a href="{% url 'blog:blog_dashboard' %}" class="btn btn-secondary login-btn">Dashboard</a>
     
     {% if user.is_authenticated %}
         <!-- Show logout button if the user is logged in -->
@@ -29,7 +29,9 @@
     <input type="text" placeholder="Your Name">
     <input type="email" placeholder="Your Email">
     <button type="button">Subscribe</button>
+    <p class="subscription-text">Subscribe to get the latest content and updates!</p>
 </div>
+
 
 </body>
 </html>
