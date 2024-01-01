@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Blog{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        <style>
+            /* Custom styles */
+            
+        
+            .navbar-dark .navbar-toggler {
+                border: 2px solid blue; /* Retained the initial color */
+            }
+        
+            .nav-link {
+                background-color: blue;
+                color: whitesmoke;
+            }
+            .nav-link btn-custom :hover{
+              background-color:navy;
+            }
+            
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    margin-right: auto; /* Align menu items to the right for larger screens */
+                }
+        
+                .navbar-toggler {
+                    order: -1; /* Move the toggler to the left for larger screens */
+                }
+        
+                .navbar-nav .nav-item {
+                    margin-right: 10px; /* Adjust the spacing between navbar items for larger screens */
+                }
+            }
+        </style>
+        
+    </style>
 </head>
 <body>
 
-<div class="navbar">
-        <a href="{% url 'blog:blog_dashboard' %}" class="btn btn-secondary login-btn">Dashboard</a>
-    
-    {% if user.is_authenticated %}
-        <!-- Show logout button if the user is logged in -->
-        <a href="{% url 'blog:logout' %}" class="btn btn-secondary login-btn">Log Out</a>
-    {% else %}
-        <!-- Show login button if the user is logged out -->
-        <a href="{% url 'blog:login' %}" class="btn btn-secondary login-btn">Log In</a>
-    {% endif %}
-</div>
+<!-- Navbar with Toggle Button -->
+<nav class="navbar navbar-expand-md navbar-dark bg-whitesmoke">
+    <a class="navbar-brand" href="{% url 'blog:blog_dashboard' %}"   style="color:black;">My Blog</a>
+    <button class="navbar-toggler" style=" background-color:whitesmoke;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" style="color:black; font-size:14px;"></i> <!-- Icon for small and medium screens -->
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link btn-custom" href="{% url 'blog:blog_dashboard' %}">Dashboard</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link btn-custom" href="{% url 'blog:logout' %}">Log Out</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link btn-custom" href="{% url 'blog:login' %}">Log In</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
 
 <div class="content">
     {% block content %}{% endblock %}
@@ -32,6 +81,9 @@
     <p class="subscription-text">Subscribe to get the latest content and updates!</p>
 </div>
 
-
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

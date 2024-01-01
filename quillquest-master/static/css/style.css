@@ -3,22 +3,6 @@ body {
   font-family: 'Noto Sans', sans-serif; /* Use the custom font you defined in your CSS */
 }
 
-.navbar {
-  background-color:whitesmoke; /* Grey background color */
-  overflow: hidden;
-  padding: 24px; /* Increase the padding for a longer navbar */
-  display: flex;
-  justify-content: flex-end; /* Align items to the right */
-}
-
-.navbar a {
-  color: #fff; /* White text color */
-  text-decoration: none;
-  padding: 14px 16px;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 5px; /* Add some border-radius for a button-like appearance */
-  margin-left: 10px; /* Add some space between the buttons */
-}
 
 .navbar a:hover {
   background-color: navy; /* Yellow background on hover */
